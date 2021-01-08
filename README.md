@@ -3,7 +3,7 @@
 Exploring zero-cost wrappers (aka newtypes) for Scala 3 built on top of [opaque types](https://dotty.epfl.ch/docs/reference/other-new-features/opaques.html).
 
 ```scala
-import dev.profunktor.newtypes._
+import dev.profunktor.NewType
 
 val Foo = NewType.of[Int]
 type Foo = Foo.Type
