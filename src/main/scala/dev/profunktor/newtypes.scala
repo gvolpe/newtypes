@@ -7,6 +7,7 @@ object NewType:
     opaque type Type = A
     def apply(a: A): Type = a
     extension (a: Type) def value: A = a
+    given (using CanEqual[A, A]): CanEqual[Type, Type] = CanEqual.derived
   end GenNewType
 
   class NewTypeBool extends GenNewType[Boolean]:
